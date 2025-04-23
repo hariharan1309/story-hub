@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import SearchBar from "@/components/SearchBar";
 import Sidebar from "@/components/SideBar";
 import Stories from "@/components/Stories";
 import { Story } from "@/components/Storycard";
@@ -85,7 +86,7 @@ export default function Home() {
       <div className="flex-1">
         <Header title="Stories" username="Akshita Patel" />
         <div className="p-4 md:p-6">
-
+          <SearchBar />
         </div>
       </div>
       <Stories stories={stories} />
