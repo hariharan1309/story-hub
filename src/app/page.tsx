@@ -14,7 +14,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story1.jpg",
+    imageSrc: "/stories/story_1.jpg",
     views: 428,
   },
   {
@@ -23,7 +23,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Created",
-    imageSrc: "/images/story2.jpg",
+    imageSrc: "/stories/story_2.jpg",
     views: 428,
   },
   {
@@ -32,17 +32,16 @@ const stories: Story[] = [
     category: "Politics",
     date: "20 Sep 2022",
     status: "Draft",
-    imageSrc: "/images/story3.jpg",
+    imageSrc: "/stories/story_3.jpg",
     views: 428,
   },
-  // Duplicate stories for the grid
   {
     id: 4,
     title: "How 7 lines code turned into $36 Billion Empire",
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story1.jpg",
+    imageSrc: "/stories/story_1.jpg",
     views: 428,
   },
   {
@@ -51,7 +50,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story4.jpg",
+    imageSrc: "/stories/story_4.jpg",
     views: 428,
   },
   {
@@ -60,7 +59,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story5.jpg",
+    imageSrc: "/stories/story_5.jpg",
     views: 428,
   },
   {
@@ -69,7 +68,7 @@ const stories: Story[] = [
     category: "Politics",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story6.jpg",
+    imageSrc: "/stories/story_6.jpg",
     views: 428,
   },
   {
@@ -78,7 +77,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/images/story4.jpg",
+    imageSrc: "/stories/story_4.jpg",
     views: 428,
   },
 ];

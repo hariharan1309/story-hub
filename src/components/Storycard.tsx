@@ -86,19 +86,19 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow">
       <div className="relative">
-        <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-          <div className="w-full h-full relative">
+        <div className="bg-gray-200">
+          <div className="relative">
             <Image
               src={story.imageSrc}
               alt={story.title}
-              layout="fill"
-              objectFit="cover"
+              width={340}
+              height={500}
+              className="object-cover aspect-auto h-[500px] w-auto"
             />
           </div>
         </div>
         <div className="absolute top-2 right-2 flex space-x-1">
           <div className="bg-white/90 rounded-md px-2 py-1 flex items-center">
-            {/* <FiEye className="h-4 w-4 text-gray-600 mr-1" /> */}
             <EyeIcon />
             <span className="text-xs text-gray-800">{story.views}</span>
           </div>
@@ -106,40 +106,41 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             <ChartIcon />
           </button>
         </div>
-      </div>
-
-      <div className="p-4">
-        <h3 className="text-lg font-medium mb-2">{story.title}</h3>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center text-sm">
-            <span className="text-gray-600 font-medium mr-2">
-              {story.category}
-            </span>
-            <span className="text-gray-400">• {story.date}</span>
+        <div className="absolute bottom-0 left-0 right-0">
+          <div className="p-4">
+            <h3 className="text-lg font-medium mb-2">{story.title}</h3>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center text-sm">
+                <span className="text-gray-600 font-medium mr-2">
+                  {story.category}
+                </span>
+                <span className="text-gray-400">• {story.date}</span>
+              </div>
+              <div>
+                <span
+                  className={`px-2 py-1 text-xs rounded ${
+                    story.status === "Published"
+                      ? "bg-green-100 text-green-700"
+                      : story.status === "Created"
+                      ? "bg-blue-100 text-blue-700"
+                      : "bg-gray-100 text-gray-700"
+                  }`}
+                >
+                  {story.status}
+                </span>
+              </div>
+            </div>
           </div>
-          <div>
-            <span
-              className={`px-2 py-1 text-xs rounded ${
-                story.status === "Published"
-                  ? "bg-green-100 text-green-700"
-                  : story.status === "Created"
-                  ? "bg-blue-100 text-blue-700"
-                  : "bg-gray-100 text-gray-700"
-              }`}
-            >
-              {story.status}
-            </span>
+
+          <div className="border-t border-gray-200 grid grid-cols-2 divide-x divide-gray-200">
+            <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
+              View
+            </button>
+            <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
+              <DotIcon />
+            </button>
           </div>
         </div>
-      </div>
-
-      <div className="border-t border-gray-200 grid grid-cols-2 divide-x divide-gray-200">
-        <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
-          View
-        </button>
-        <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
-          <DotIcon />
-        </button>
       </div>
     </div>
   );
