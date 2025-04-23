@@ -1,3 +1,4 @@
+"use client";
 import ActionButtons from "@/components/ActionButtons";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
@@ -92,7 +93,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("All");
 
   return (
-    <div>
+    <div className="flex">
       <Sidebar />
       <div className="flex-1">
         <Header title="Stories" username="Akshita Patel" />
