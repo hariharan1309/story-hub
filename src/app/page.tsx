@@ -84,6 +84,9 @@ export default function Home() {
       <Sidebar />
       <div className="flex-1">
         <Header title="Stories" username="Akshita Patel" />
+        <div className="p-4 md:p-6">
+
+        </div>
       </div>
       <Stories stories={stories} />
     </div>
