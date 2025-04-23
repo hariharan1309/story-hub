@@ -1,6 +1,6 @@
 import Sidebar from "@/components/SideBar";
-import StoryGrid from "@/components/Stories";
-import Image from "next/image";
+import Stories from "@/components/Stories";
+import { Story } from "@/components/Storycard";
 
 export default function Home() {
   const stories: Story[] = [
@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <div>
       <Sidebar />
-      <StoryGrid />
+      <Stories stories={stories} />
     </div>
   );
 }
