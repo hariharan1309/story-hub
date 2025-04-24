@@ -84,7 +84,7 @@ const DotIcon = () => {
 };
 const Storycard: React.FC<StoryCardProps> = ({ story }) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow">
+    <div className="rounded-lg overflow-hidden group shadow">
       <div className="relative h-[400px] w-full sm:h-[max(calc(50vh),500px)] rounded-[10px]">
         <div className="bg-gray-200 h-full rounded-[10px]">
           <Image
@@ -93,7 +93,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             width={340}
             loading="lazy"
             height={500}
-            className="object-cover w-full h-full rounded-[10px]"
+            className="object-cover w-full group-hover:scale-105 duration-200 h-full rounded-[10px]"
           />
         </div>
         <div className="z-[1000] absolute top-3 right-3 flex space-x-1">
@@ -107,7 +107,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
         </div>
         <div className=" z-[1000] absolute bottom-2 left-2">
           <div className="p-2">
-            <p className="text-lg font-medium mb-1">{story.title}</p>
+            <p className="text-lg mb-1">{story.title}</p>
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center text-sm">
                 <span className="text-gray-200 font-bold mr-2">

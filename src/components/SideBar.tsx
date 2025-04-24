@@ -427,7 +427,7 @@ const Sidebar = ({
           <button
             onClick={toggleSidebar}
             aria-label="Close sidebar"
-            className=" absolute right-2 p-2 lg:hidden"
+            className=" absolute right-2 p-2 lg:hidden cursor-pointer"
           >
             <svg
               width="24"
