@@ -84,20 +84,18 @@ const DotIcon = () => {
 };
 const Storycard: React.FC<StoryCardProps> = ({ story }) => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow">
-      <div className="relative">
-        <div className="bg-gray-200">
-          <div className="relative">
-            <Image
-              src={story.imageSrc}
-              alt={story.title}
-              width={340}
-              height={500}
-              className="object-cover aspect-auto h-[500px] w-auto"
-            />
-          </div>
+    <div className="rounded-lg overflow-hidden shadow">
+      <div className="relative h-[max(calc(50vh),500px)]">
+        <div className="bg-gray-200 h-full">
+          <Image
+            src={story.imageSrc}
+            alt={story.title}
+            width={340}
+            height={500}
+            className="object-cover w-full h-full"
+          />
         </div>
-        <div className="absolute top-2 right-2 flex space-x-1">
+        <div className="z-[1000] absolute top-2 right-2 flex space-x-1">
           <div className="bg-white/90 rounded-md px-2 py-1 flex items-center">
             <EyeIcon />
             <span className="text-xs text-gray-800">{story.views}</span>
@@ -106,7 +104,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             <ChartIcon />
           </button>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className=" z-[1000] absolute bottom-2 left-2">
           <div className="p-4">
             <h3 className="text-lg font-medium mb-2">{story.title}</h3>
             <div className="flex items-center justify-between">
@@ -132,15 +130,16 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 grid grid-cols-2 divide-x divide-gray-200">
-            <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
+          <div className="flex items-center justify-evenly">
+            <button className=" h-[55px] px-[25%] rounded-[10px] flex items-center justify-center text-gray-700 bg-gray-100">
               View
             </button>
-            <button className="py-3 flex items-center justify-center text-gray-700 hover:bg-gray-50">
+            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-gray-700 bg-gray-100">
               <DotIcon />
             </button>
           </div>
         </div>
+        <div className="absolute top-0 left-0 h-full w-full rounded-lg bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.7)]"></div>
       </div>
     </div>
   );
