@@ -59,18 +59,18 @@ const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
         <div className="flex items-center">
           <button
             aria-label="Toggle Sidebar"
-            className="mr-2 block md:hidden"
+            className="mr-2 block lg:hidden"
             onClick={toggleSidebar}
           >
             <MenuIcon />
           </button>
-          <button name="Back" aria-label="Back" className="mr-2 md:mr-4">
+          <button name="Back" aria-label="Back" className="mr-2 md:mr-4 hidden lg:block">
             <BackArrow />{" "}
           </button>
           <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
         </div>
 
-        <div className="flex items-center md:w-full justify-between border-[#E8EFF7] border-[1px] p-1.5 rounded">
+        <div className="flex items-center justify-between border-[#E8EFF7] border-[1px] p-1.5 rounded">
           <div className="flex items-center gap-2">
             <div className="mr-2 relative">
               <div className="bg-[#FCFCFD] rounded-full h-8 w-8 flex items-center justify-center">

@@ -18,7 +18,7 @@ const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, setActiveTab }) => {
             name="Tag"
             aria-label="Tag"
             key={tab.name}
-            className={`p-2 sm:p-3 md:p-[15px] cursor-pointer rounded-[10px] font-semibold space-x-1 whitespace-nowrap ${
+            className={`p-2 sm:p-3 lg:p-[15px] cursor-pointer rounded-[10px] font-semibold space-x-1 whitespace-nowrap ${
               activeTab === tab.name
                 ? "bg-[#1C1442] text-white"
                 : "bg-[#E7E8EF] text-gray-800 hover:bg-gray-200"

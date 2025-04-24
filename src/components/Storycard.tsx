@@ -132,10 +132,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </div>
 
           <div className="flex items-center justify-evenly">
-            <button name="View More" aria-label="View More" className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
+            <button name="View More" aria-label="View More" className="max-sm:h-[40px] h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               View
             </button>
-            <button name="Options" aria-label="Options" className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
+            <button name="Options" aria-label="Options" className="max-sm:h-[40px] h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               <DotIcon />
             </button>
           </div>

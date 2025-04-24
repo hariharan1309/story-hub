@@ -407,7 +407,7 @@ const Sidebar = ({
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-white/20 backdrop-blur-[2px] cursor-pointer z-[10000] md:hidden"
+          className="fixed inset-0 bg-white/20 backdrop-blur-[2px] cursor-pointer z-[10000] lg:hidden"
           onClick={toggleSidebar}
         />
       )}
@@ -415,15 +415,15 @@ const Sidebar = ({
       {/* Sidebar - always visible on md screens, conditionally visible on mobile */}
       <div
         id="sidebar"
-        className={`w-64 bg-white border-r border-gray-200 fixed h-full z-30 transition-transform duration-300 ease-in-out md:translate-x-0 ${
+        className={`w-64 bg-white border-r border-gray-200 fixed h-full z-30 transition-transform duration-300 ease-in-out lg:translate-x-0 ${
           isOpen ? "translate-x-0 z-[99999]" : "-translate-x-full"
-        } md:static`}
+        } lg:static`}
       >
         <div className="p-4 grid h-full">
           <button
             onClick={toggleSidebar}
             aria-label="Close sidebar"
-            className=" absolute right-2 p-2 md:hidden"
+            className=" absolute right-2 p-2 lg:hidden"
           >
             <svg
               width="24"
@@ -448,12 +448,12 @@ const Sidebar = ({
               />
             </svg>
           </button>{" "}
-          <div className="flex items-center justify-between md:hidden">
+          <div className="flex items-center justify-between lg:hidden">
             <div className="flex items-start justify-start cursor-pointer text-[#1D1D1B] text-lg font-semibold">
               📔S•T•O•R•Y • H•U•B
             </div>
           </div>
-          <div className="hidden md:flex items-start justify-start cursor-pointer pt-4 text-[#1D1D1B] text-lg font-semibold">
+          <div className="hidden lg:flex items-start justify-start cursor-pointer pt-4 text-[#1D1D1B] text-lg font-semibold">
             📔S•T•O•R•Y • H•U•B
           </div>
           <div className="space-y-1 overflow-y-auto">
