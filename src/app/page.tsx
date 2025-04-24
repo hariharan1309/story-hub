@@ -1,5 +1,5 @@
 "use client";
-import ActionButtons from "@/components/ActionButtons";
+import AddStory from "@/components/AddStory";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import Sidebar from "@/components/SideBar";
@@ -98,9 +98,9 @@ export default function Home() {
         <Header title="Stories" username="Akshita Patel" />
 
         <div className="p-4 md:p-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-end mb-4 gap-2 md:gap-4 lg:gap-6">
             <SearchBar />
-            <ActionButtons />
+            <AddStory />
           </div>
 
           <TabNav
