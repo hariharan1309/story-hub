@@ -16,6 +16,7 @@ const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, setActiveTab }) => {
         {tabs.map((tab) => (
           <button
             name="Tag"
+            aria-label="Tag"
             key={tab.name}
             className={`p-[15px] cursor-pointer rounded-[10px] font-semibold space-x-1 whitespace-nowrap ${
               activeTab === tab.name

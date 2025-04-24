@@ -101,7 +101,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             <EyeIcon />
             <span className="text-xs text-gray-800">{story.views}</span>
           </div>
-          <button name="Trending" className="bg-white/90 rounded-md px-2.5 py-[5px]">
+          <button name="Trending" aria-label="Trending" className="bg-white/90 rounded-md px-2.5 py-[5px]">
             <ChartIcon />
           </button>
         </div>
@@ -132,10 +132,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </div>
 
           <div className="flex items-center justify-evenly">
-            <button name="View More" className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
+            <button name="View More" aria-label="View More" className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               View
             </button>
-            <button name="Options" className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
+            <button name="Options" aria-label="Options" className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               <DotIcon />
             </button>
           </div>
