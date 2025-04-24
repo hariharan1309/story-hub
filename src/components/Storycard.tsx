@@ -131,10 +131,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </div>
 
           <div className="flex items-center justify-evenly">
-            <button className=" h-[55px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] bg-gray-100">
+            <button className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] bg-[#E8E9FF]">
               View
             </button>
-            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] bg-gray-100">
+            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] bg-[#E8E9FF]">
               <DotIcon />
             </button>
           </div>

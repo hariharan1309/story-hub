@@ -98,7 +98,7 @@ export default function Home() {
         <Header title="Stories" username="Akshita Patel" />
 
         <div className="p-4 md:p-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-end mb-4 gap-2 md:gap-4 lg:gap-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-end mb-4 gap-2 md:gap-4 lg:gap-8">
             <SearchBar />
             <AddStory />
           </div>

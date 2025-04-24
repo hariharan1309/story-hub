@@ -24,19 +24,19 @@ const BackArrow = () => {
 
 const Header: React.FC<HeaderProps> = ({ title, username }) => {
   return (
-    <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div className="bg-white shadow shadow-[#B6B6B61A] sticky top-0 z-10">
       <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
           <button className="mr-2">
             <BackArrow />{" "}
           </button>
-          <h1 className="text-xl font-semibold text-gray-800">{title}</h1>
+          <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
         </div>
 
-        <div className="flex items-center md:w-72 justify-between">
+        <div className="flex items-center md:w-[300px] justify-between border-[#E8EFF7] border-[1px] p-1.5 rounded">
           <div className="flex items-center gap-2">
             <div className="mr-2 relative">
-              <div className="bg-purple-100 rounded-full h-8 w-8 flex items-center justify-center">
+              <div className="bg-[#FCFCFD] rounded-full h-8 w-8 flex items-center justify-center">
                 <Image
                   src={Profile}
                   alt="Profile"
@@ -47,15 +47,15 @@ const Header: React.FC<HeaderProps> = ({ title, username }) => {
               </div>
             </div>
             <div>
-              <div className="text-[10px] text-gray-500">Welcome back,</div>
-              <div className="text-sm font-medium text-gray-800">
+              <div className="text-[10px] text-[#373B5C]">Welcome back,</div>
+              <div className="text-sm font-medium text-[#373B5C]">
                 {username}
               </div>
             </div>
           </div>
-          <button className="ml-2">
+          <button className="">
             <svg
-              className="h-5 w-5 text-gray-500"
+              className="h-5 w-5 text-[#1E2875]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
