@@ -98,7 +98,7 @@ export default function Home() {
         <Header title="Stories" username="Akshita Patel" />
 
         <div className="p-4 md:p-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <SearchBar />
             <ActionButtons />
           </div>

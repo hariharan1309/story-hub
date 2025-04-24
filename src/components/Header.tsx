@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Profile from "@/../public/profile.png";
 type HeaderProps = {
   title: string;
   username: string;
@@ -28,23 +30,28 @@ const Header: React.FC<HeaderProps> = ({ title, username }) => {
           <button className="mr-2">
             <BackArrow />{" "}
           </button>
-          <h1 className="text-xl font-medium">{title}</h1>
+          <h1 className="text-xl font-semibold text-gray-800">{title}</h1>
         </div>
 
-        <div className="flex items-center">
-          <div className="mr-2 relative">
-            <div className="bg-purple-100 rounded-full h-8 w-8 flex items-center justify-center">
-              <span className="text-sm font-medium text-purple-800">
-                {username
-                  .split(" ")
-                  .map((name) => name[0])
-                  .join("")}
-              </span>
+        <div className="flex items-center md:w-72 justify-between">
+          <div className="flex items-center gap-2">
+            <div className="mr-2 relative">
+              <div className="bg-purple-100 rounded-full h-8 w-8 flex items-center justify-center">
+                <Image
+                  src={Profile}
+                  alt="Profile"
+                  width={40}
+                  height={40}
+                  className="object-cover rounded"
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="text-xs text-gray-500">Welcome back</div>
-            <div className="text-sm font-medium">{username}</div>
+            <div>
+              <div className="text-[10px] text-gray-500">Welcome back,</div>
+              <div className="text-sm font-medium text-gray-800">
+                {username}
+              </div>
+            </div>
           </div>
           <button className="ml-2">
             <svg
