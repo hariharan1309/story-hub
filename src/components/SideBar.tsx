@@ -47,7 +47,7 @@ const sidebarItems = [
         />
         <path
           d="M11 17.75H7C6.59 17.75 6.25 17.41 6.25 17C6.25 16.59 6.59 16.25 7 16.25H11C11.41 16.25 11.75 16.59 11.75 17C11.75 17.41 11.41 17.75 11 17.75Z"
-          fill="white"
+          fill="currentColor"
         />
       </svg>
     ),
@@ -320,7 +320,7 @@ const Sidebar = () => {
   return (
     <div className="w-64 bg-white border-r border-gray-200 hidden md:block">
       <div className="p-4">
-        <div className="flex items-start justify-start cursor-pointer py-5 text-[#1D1D1B] text-lg font-semibold">
+        <div className="flex items-start justify-start cursor-pointer my-5 text-[#1D1D1B] text-lg font-semibold">
           📔S•T•O•R•Y • H•U•B
         </div>
         <div className="space-y-1 overflow-y-auto max-h-[calc(100vh-150px)]">
@@ -354,7 +354,7 @@ const Sidebar = () => {
           ))}
         </div>
 
-        <div className="flex items-center p-3 rounded-lg hover:bg-gray-100 mt-4 cursor-pointer">
+        <div className="flex items-center p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer">
           <div className="mr-3">
             <svg
               width="24"

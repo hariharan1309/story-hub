@@ -85,14 +85,14 @@ const DotIcon = () => {
 const Storycard: React.FC<StoryCardProps> = ({ story }) => {
   return (
     <div className="rounded-lg overflow-hidden shadow">
-      <div className="relative h-[max(calc(50vh),500px)]">
-        <div className="bg-gray-200 h-full">
+      <div className="relative h-[max(calc(50vh),500px)] rounded-[10px]">
+        <div className="bg-gray-200 h-full rounded-[10px]">
           <Image
             src={story.imageSrc}
             alt={story.title}
             width={340}
             height={500}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full rounded-[10px]"
           />
         </div>
         <div className="z-[1000] absolute top-3 right-3 flex space-x-1">
@@ -139,7 +139,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             </button>
           </div>
         </div>
-        <div className="absolute top-0 left-0 h-full w-full rounded-lg bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.7)]"></div>
+        <div className="absolute top-0 left-0 h-full w-full rounded-[10px] bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.7)]"></div>
       </div>
     </div>
   );
