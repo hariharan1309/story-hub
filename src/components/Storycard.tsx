@@ -105,23 +105,23 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </button>
         </div>
         <div className=" z-[1000] absolute bottom-2 left-2">
-          <div className="p-4">
-            <h3 className="text-lg font-medium mb-2">{story.title}</h3>
-            <div className="flex items-center justify-between">
+          <div className="p-2">
+            <h3 className="text-lg font-medium mb-1">{story.title}</h3>
+            <div className="flex items-center justify-between mb-1">
               <div className="flex items-center text-sm">
-                <span className="text-gray-600 font-medium mr-2">
-                  {story.category}
+                <span className="text-gray-200 font-bold mr-2">
+                  {story.category} •
                 </span>
-                <span className="text-gray-400">• {story.date}</span>
+                <span className="text-[#A0A3BD]">{story.date}</span>
               </div>
               <div>
                 <span
-                  className={`px-2 py-1 text-xs rounded ${
+                  className={`px-5 py-2.5 text-xs rounded-[5px] ${
                     story.status === "Published"
-                      ? "bg-green-100 text-green-700"
+                      ? "bg-green-100 text-[#0DAD82]"
                       : story.status === "Created"
-                      ? "bg-blue-100 text-blue-700"
-                      : "bg-gray-100 text-gray-700"
+                      ? "bg-blue-100 text-[#58A4FF]"
+                      : "bg-gray-100 text-[#A0A3BD]"
                   }`}
                 >
                   {story.status}
@@ -131,10 +131,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </div>
 
           <div className="flex items-center justify-evenly">
-            <button className=" h-[55px] px-[25%] rounded-[10px] flex items-center justify-center text-gray-700 bg-gray-100">
+            <button className=" h-[55px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] bg-gray-100">
               View
             </button>
-            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-gray-700 bg-gray-100">
+            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] bg-gray-100">
               <DotIcon />
             </button>
           </div>

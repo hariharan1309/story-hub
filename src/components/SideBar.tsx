@@ -330,7 +330,7 @@ const Sidebar = () => {
               onClick={() => setActiveTab(item.name)}
             >
               <div
-                className={`mr-3 ${
+                className={`mr-2.5 size-6 ${
                   item.name === activeTab
                     ? "fill-[#FFFFFF]"
                     : " fill-[#53545C] text-[#53545C] "
@@ -340,7 +340,7 @@ const Sidebar = () => {
               </div>
               <span
                 className={`${
-                  item.name === activeTab ? "text-white" : "text-[#53545C]"
+                  item.name === activeTab ? "text-white text-sm" : "text-[#53545C] text-sm"
                 }`}
               >
                 {item.name}
