@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
           <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
         </div>
 
-        <div className="flex items-center justify-between cursor-pointer border-[#E8EFF7] border-[1px] p-1.5 rounded">
+        <div className="flex items-center justify-between md:w-72 cursor-pointer border-[#E8EFF7] border-[1px] p-1.5 rounded">
           <div className="flex items-center gap-2">
             <div className="mr-2 relative">
               <div className="bg-[#FCFCFD] rounded-full h-8 w-8 flex items-center justify-center">

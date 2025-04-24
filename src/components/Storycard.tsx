@@ -84,7 +84,7 @@ const DotIcon = () => {
 };
 const Storycard: React.FC<StoryCardProps> = ({ story }) => {
   return (
-    <div className="rounded-lg overflow-hidden group shadow">
+    <div className="rounded-lg overflow-hidden group shadow cursor-pointer">
       <div className="relative h-[400px] w-full sm:h-[max(calc(50vh),500px)] rounded-[10px]">
         <div className="bg-gray-200 h-full rounded-[10px]">
           <Image
