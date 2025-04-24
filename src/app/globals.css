@@ -28,3 +28,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hidescrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hidescrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+

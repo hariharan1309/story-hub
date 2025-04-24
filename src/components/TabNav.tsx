@@ -12,7 +12,7 @@ type TabNavProps = {
 const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <div className="mb-6">
-      <div className="flex max-md:overflow-x-auto max-sm:max-w-full space-x-2">
+      <div className="flex hidescrollbar max-md:overflow-x-auto max-sm:max-w-full space-x-2">
         {tabs.map((tab) => (
           <button
             name="Tag"
