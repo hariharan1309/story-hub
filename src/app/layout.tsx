@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Urbanist } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,11 +10,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  variable: "--font-urban",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} *:font-urban antialiased`}
       >
-        <div className="flex min-h-screen bg-gray-50 font-urban">{children}</div>
+        <div className="flex min-h-screen bg-gray-50">{children}</div>{" "}
       </body>
     </html>
   );

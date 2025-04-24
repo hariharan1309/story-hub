@@ -95,12 +95,12 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="z-[1000] absolute top-2 right-2 flex space-x-1">
-          <div className="bg-white/90 rounded-md px-2 py-1 flex items-center">
+        <div className="z-[1000] absolute top-3 right-3 flex space-x-1">
+          <div className="bg-white/90 rounded-md px-2.5 py-[5px] gap-1 flex items-center">
             <EyeIcon />
             <span className="text-xs text-gray-800">{story.views}</span>
           </div>
-          <button className="bg-white/90 rounded-md p-1">
+          <button className="bg-white/90 rounded-md px-2.5 py-[5px]">
             <ChartIcon />
           </button>
         </div>

@@ -16,14 +16,14 @@ const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, setActiveTab }) => {
         {tabs.map((tab) => (
           <button
             key={tab.name}
-            className={`px-4 py-2 rounded-md font-medium text-sm whitespace-nowrap ${
+            className={`p-[15px] rounded-md font-semibold text-sm whitespace-nowrap ${
               activeTab === tab.name
-                ? 'bg-indigo-900 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-[#1C1442] text-white'
+                : 'bg-[#E7E8EF] text-gray-700 hover:bg-gray-200'
             }`}
             onClick={() => setActiveTab(tab.name)}
           >
-            {tab.name} ({tab.count})
+            {tab.name} <span className="text-[#A0A3BD]"></span>({tab.count})
           </button>
         ))}
       </div>
