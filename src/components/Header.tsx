@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ title, username }) => {
     <div className="bg-white shadow shadow-[#B6B6B61A] sticky top-0 z-10">
       <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <button className="mr-2">
+          <button name="Back" className="mr-2">
             <BackArrow />{" "}
           </button>
           <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ title, username }) => {
               </div>
             </div>
           </div>
-          <button className="">
+          <button className="" name="Profile Dropdown">
             <svg
               className="h-5 w-5 text-[#1E2875]"
               fill="none"

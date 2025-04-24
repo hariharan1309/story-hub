@@ -15,8 +15,9 @@ const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, setActiveTab }) => {
       <div className="flex space-x-2 min-w-max">
         {tabs.map((tab) => (
           <button
+            name="Tag"
             key={tab.name}
-            className={`p-[15px] rounded-[10px] font-semibold space-x-1 whitespace-nowrap ${
+            className={`p-[15px] cursor-pointer rounded-[10px] font-semibold space-x-1 whitespace-nowrap ${
               activeTab === tab.name
                 ? "bg-[#1C1442] text-white"
                 : "bg-[#E7E8EF] text-gray-700 hover:bg-gray-200"

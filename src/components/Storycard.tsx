@@ -91,6 +91,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             src={story.imageSrc}
             alt={story.title}
             width={340}
+            loading="lazy"
             height={500}
             className="object-cover w-full h-full rounded-[10px]"
           />
@@ -100,13 +101,13 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
             <EyeIcon />
             <span className="text-xs text-gray-800">{story.views}</span>
           </div>
-          <button className="bg-white/90 rounded-md px-2.5 py-[5px]">
+          <button name="Trending" className="bg-white/90 rounded-md px-2.5 py-[5px]">
             <ChartIcon />
           </button>
         </div>
         <div className=" z-[1000] absolute bottom-2 left-2">
           <div className="p-2">
-            <h3 className="text-lg font-medium mb-1">{story.title}</h3>
+            <p className="text-lg font-medium mb-1">{story.title}</p>
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center text-sm">
                 <span className="text-gray-200 font-bold mr-2">
@@ -118,10 +119,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
                 <span
                   className={`px-5 py-2.5 text-xs rounded-[5px] ${
                     story.status === "Published"
-                      ? "bg-green-100 text-[#0DAD82]"
+                      ? "bg-[#E4FFF8] text-[#0DAD82]"
                       : story.status === "Created"
-                      ? "bg-blue-100 text-[#58A4FF]"
-                      : "bg-gray-100 text-[#A0A3BD]"
+                      ? "bg-[#DAF1FB] text-[#58A4FF]"
+                      : "bg-[#F4F4F4] text-[#A0A3BD]"
                   }`}
                 >
                   {story.status}
@@ -131,10 +132,10 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
           </div>
 
           <div className="flex items-center justify-evenly">
-            <button className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] bg-[#E8E9FF]">
+            <button name="View More" className=" h-[48px] px-[25%] rounded-[10px] font-medium flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               View
             </button>
-            <button className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] bg-[#E8E9FF]">
+            <button name="Options" className=" h-[53px] p-[15px] rounded-[10px] flex items-center justify-center text-[#1C1442] cursor-pointer bg-[#E8E9FF]">
               <DotIcon />
             </button>
           </div>
