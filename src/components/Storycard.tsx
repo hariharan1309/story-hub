@@ -107,7 +107,7 @@ const Storycard: React.FC<StoryCardProps> = ({ story }) => {
         </div>
         <div className=" z-[1000] absolute bottom-2 left-2">
           <div className="p-2">
-            <p className="text-lg mb-1">{story.title}</p>
+            <p className="text-lg mb-1 font-medium">{story.title}</p>
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center text-sm">
                 <span className="text-gray-200 font-bold mr-2">
