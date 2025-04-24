@@ -337,72 +337,186 @@ const Sidebar = ({
     };
   }, [isOpen, toggleSidebar]);
   return (
-    <div className="w-64 bg-white border-r border-gray-200 hidden md:block">
-      <div className="p-4 grid h-full">
-        <div className="flex items-start justify-start cursor-pointer pt-4 text-[#1D1D1B] text-lg font-semibold">
-          📔S•T•O•R•Y • H•U•B
-        </div>
-        <div className="space-y-1 overflow-y-auto">
-          {sidebarItems.map((item) => (
-            <div
-              key={item.name}
-              className={`flex items-center p-3 rounded-lg cursor-pointer ${
-                item.name === activeTab ? "bg-[#1C1442]" : "hover:bg-gray-100"
-              }`}
-              onClick={() => setActiveTab(item.name)}
-            >
-              <div
-                className={`mr-2.5 size-6 ${
-                  item.name === activeTab
-                    ? "fill-[#FFFFFF]"
-                    : " fill-[#53545C] text-[#53545C] "
-                }`}
-              >
-                {item.icon}
-              </div>
-              <span
-                className={` font-medium ${
-                  item.name === activeTab
-                    ? "text-white text-sm"
-                    : "text-[#53545C] text-sm"
-                }`}
-              >
-                {item.name}
-              </span>
-            </div>
-          ))}
-        </div>
+    // <div className="w-64 bg-white border-r border-gray-200 hidden md:block">
+    //   <div className="p-4 grid h-full">
+    //     <div className="flex items-start justify-start cursor-pointer pt-4 text-[#1D1D1B] text-lg font-semibold">
+    //       📔S•T•O•R•Y • H•U•B
+    //     </div>
+    //     <div className="space-y-1 overflow-y-auto">
+    //       {sidebarItems.map((item) => (
+    //         <div
+    //           key={item.name}
+    //           className={`flex items-center p-3 rounded-lg cursor-pointer ${
+    //             item.name === activeTab ? "bg-[#1C1442]" : "hover:bg-gray-100"
+    //           }`}
+    //           onClick={() => setActiveTab(item.name)}
+    //         >
+    //           <div
+    //             className={`mr-2.5 size-6 ${
+    //               item.name === activeTab
+    //                 ? "fill-[#FFFFFF]"
+    //                 : " fill-[#53545C] text-[#53545C] "
+    //             }`}
+    //           >
+    //             {item.icon}
+    //           </div>
+    //           <span
+    //             className={` font-medium ${
+    //               item.name === activeTab
+    //                 ? "text-white text-sm"
+    //                 : "text-[#53545C] text-sm"
+    //             }`}
+    //           >
+    //             {item.name}
+    //           </span>
+    //         </div>
+    //       ))}
+    //     </div>
 
-        <div className="flex pl-4 font-inter ml-[-8] items-center place-items-end rounded-lg bg-[#E8E9FF] mt-2 cursor-pointer">
-          <div className="mr-3">
+    //     <div className="flex pl-4 font-inter ml-[-8] items-center place-items-end rounded-lg bg-[#E8E9FF] mt-2 cursor-pointer">
+    //       <div className="mr-3">
+    //         <svg
+    //           width="24"
+    //           height="24"
+    //           viewBox="0 0 24 24"
+    //           fill="none"
+    //           xmlns="http://www.w3.org/2000/svg"
+    //           className="w-5 h-5"
+    //         >
+    //           <path
+    //             d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18"
+    //             stroke="black"
+    //             strokeWidth="2"
+    //             strokeLinecap="round"
+    //             strokeLinejoin="round"
+    //           />
+    //           <path
+    //             d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z"
+    //             stroke="black"
+    //             strokeWidth="2"
+    //             strokeLinecap="round"
+    //             strokeLinejoin="round"
+    //           />
+    //         </svg>
+    //       </div>
+    //       <span className="text-[#1C1D22]">Contact Support</span>
+    //     </div>
+    //   </div>
+    // </div>
+    <>
+      {/* Mobile overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-white/20 backdrop-blur-[2px] cursor-pointer z-[10000] md:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
+
+      {/* Sidebar - always visible on md screens, conditionally visible on mobile */}
+      <div
+        id="sidebar"
+        className={`w-64 bg-white border-r border-gray-200 fixed h-full z-30 transition-transform duration-300 ease-in-out md:translate-x-0 ${
+          isOpen ? "translate-x-0 z-[99999]" : "-translate-x-full"
+        } md:static`}
+      >
+        <div className="p-4 grid h-full">
+          <button
+            onClick={toggleSidebar}
+            aria-label="Close sidebar"
+            className=" absolute right-2 p-2 md:hidden"
+          >
             <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
             >
               <path
-                d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18"
-                stroke="black"
+                d="M18 6L6 18"
+                stroke="#1D1D1B"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z"
-                stroke="black"
+                d="M6 6L18 18"
+                stroke="#1D1D1B"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
+          </button>{" "}
+          <div className="flex items-center justify-between md:hidden">
+            <div className="flex items-start justify-start cursor-pointer text-[#1D1D1B] text-lg font-semibold">
+              📔S•T•O•R•Y • H•U•B
+            </div>
           </div>
-          <span className="text-[#1C1D22]">Contact Support</span>
+          <div className="hidden md:flex items-start justify-start cursor-pointer pt-4 text-[#1D1D1B] text-lg font-semibold">
+            📔S•T•O•R•Y • H•U•B
+          </div>
+          <div className="space-y-1 overflow-y-auto">
+            {sidebarItems.map((item) => (
+              <div
+                key={item.name}
+                className={`flex items-center p-3 rounded-lg cursor-pointer ${
+                  item.name === activeTab ? "bg-[#1C1442]" : "hover:bg-gray-100"
+                }`}
+                onClick={() => setActiveTab(item.name)}
+              >
+                <div
+                  className={`mr-2.5 size-6 ${
+                    item.name === activeTab
+                      ? "fill-[#FFFFFF]"
+                      : " fill-[#53545C] text-[#53545C] "
+                  }`}
+                >
+                  {item.icon}
+                </div>
+                <span
+                  className={` font-medium ${
+                    item.name === activeTab
+                      ? "text-white text-sm"
+                      : "text-[#53545C] text-sm"
+                  }`}
+                >
+                  {item.name}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="flex pl-4 font-inter ml-[-8] items-center place-items-end rounded-lg bg-[#E8E9FF] mt-2 cursor-pointer">
+            <div className="mr-3">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+              >
+                <path
+                  d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <span className="text-[#1C1D22]">Contact Support</span>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Sidebar;

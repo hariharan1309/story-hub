@@ -36,7 +36,7 @@ const ListIcon = () => {
 };
 const SearchBar: React.FC = () => {
   return (
-    <div className="relative mb-4 md:mb-0 md:w-2/5 flex items-center space-x-3">
+    <div className="relative mb-4 md:mb-0 w-fit md:w-2/5 flex items-center space-x-3">
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg
           className="h-5 w-5 text-[#A0A3BD]"

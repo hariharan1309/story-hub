@@ -54,7 +54,7 @@ const MenuIcon = () => {
 };
 const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
   return (
-    <div className="bg-white shadow shadow-[#B6B6B61A] sticky top-0 z-10">
+    <div className="bg-white w-full shadow shadow-[#B6B6B61A] sticky top-0 z-10">
       <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
           <button
@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
           <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
         </div>
 
-        <div className="flex items-center md:w-[300px] justify-between border-[#E8EFF7] border-[1px] p-1.5 rounded">
+        <div className="flex items-center md:w-full justify-between border-[#E8EFF7] border-[1px] p-1.5 rounded">
           <div className="flex items-center gap-2">
             <div className="mr-2 relative">
               <div className="bg-[#FCFCFD] rounded-full h-8 w-8 flex items-center justify-center">
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
                 />
               </div>
             </div>
-            <div>
+            <div className="max-sm:hidden">
               <div className="text-[10px] text-[#373B5C]">Welcome back,</div>
               <div className="text-sm font-medium text-[#373B5C]">
                 {username}

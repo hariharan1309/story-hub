@@ -96,9 +96,9 @@ export default function Home() {
     setSidebarOpen(!sidebarOpen);
   };
   return (
-    <div className="flex">
+    <div className="flex w-full">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar}/>
-      <div className="flex-1">
+      <div className="flex-1 w-full">
         <Header
           title="Stories"
           username="Akshita Patel"
