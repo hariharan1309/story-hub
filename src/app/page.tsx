@@ -90,12 +90,20 @@ const tabs = [
 ];
 export default function Home() {
   const [activeTab, setActiveTab] = useState("All");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   return (
     <div className="flex">
-      <Sidebar />
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar}/>
       <div className="flex-1">
-        <Header title="Stories" username="Akshita Patel" />
+        <Header
+          title="Stories"
+          username="Akshita Patel"
+          toggleSidebar={toggleSidebar}
+        />
 
         <div className="p-4 md:p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-end mb-4 gap-2 md:gap-4 lg:gap-8">

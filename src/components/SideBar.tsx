@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const sidebarItems = [
+export const sidebarItems = [
   {
     name: "Dashboard",
     icon: (
@@ -315,8 +315,27 @@ const sidebarItems = [
     ),
   },
 ];
-const Sidebar = () => {
+const Sidebar = ({
+  isOpen,
+  toggleSidebar,
+}: {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+}) => {
   const [activeTab, setActiveTab] = useState("Dashboard");
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      const sidebarElement = document.getElementById("sidebar");
+      if (isOpen && sidebarElement && !sidebarElement.contains(event.target)) {
+        toggleSidebar();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, toggleSidebar]);
   return (
     <div className="w-64 bg-white border-r border-gray-200 hidden md:block">
       <div className="p-4 grid h-full">

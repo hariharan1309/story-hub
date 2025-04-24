@@ -3,6 +3,7 @@ import Profile from "@/../public/profile.png";
 type HeaderProps = {
   title: string;
   username: string;
+  toggleSidebar: () => void;
 };
 
 const BackArrow = () => {
@@ -21,13 +22,49 @@ const BackArrow = () => {
     </svg>
   );
 };
-
-const Header: React.FC<HeaderProps> = ({ title, username }) => {
+const MenuIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 7H21"
+        stroke="#1D1D1B"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M3 12H21"
+        stroke="#1D1D1B"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M3 17H21"
+        stroke="#1D1D1B"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+const Header: React.FC<HeaderProps> = ({ title, username, toggleSidebar }) => {
   return (
     <div className="bg-white shadow shadow-[#B6B6B61A] sticky top-0 z-10">
       <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <button name="Back" aria-label="Back" className="mr-2">
+          <button
+            aria-label="Toggle Sidebar"
+            className="mr-2 block md:hidden"
+            onClick={toggleSidebar}
+          >
+            <MenuIcon />
+          </button>
+          <button name="Back" aria-label="Back" className="mr-2 md:mr-4">
             <BackArrow />{" "}
           </button>
           <h1 className="text-xl font-semibold text-[#1D1D1B]">{title}</h1>
@@ -54,7 +91,11 @@ const Header: React.FC<HeaderProps> = ({ title, username }) => {
               </div>
             </div>
           </div>
-          <button className="" name="Profile Dropdown" aria-label="Profile Dropdown">
+          <button
+            className=""
+            name="Profile Dropdown"
+            aria-label="Profile Dropdown"
+          >
             <svg
               className="h-5 w-5 text-[#1E2875]"
               fill="none"
