@@ -41,7 +41,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/stories/story_1.jpg",
+    imageSrc: "/stories/story_4.jpg",
     views: 428,
   },
   {
@@ -50,7 +50,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/stories/story_4.jpg",
+    imageSrc: "/stories/story_5.jpg",
     views: 428,
   },
   {
@@ -59,7 +59,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/stories/story_5.jpg",
+    imageSrc: "/stories/story_6.jpg",
     views: 428,
   },
   {
@@ -68,7 +68,7 @@ const stories: Story[] = [
     category: "Politics",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/stories/story_6.jpg",
+    imageSrc: "/stories/story_7.jpg",
     views: 428,
   },
   {
@@ -77,7 +77,7 @@ const stories: Story[] = [
     category: "BUSINESS",
     date: "20 Sep 2022",
     status: "Published",
-    imageSrc: "/stories/story_4.jpg",
+    imageSrc: "/stories/story_5.jpg",
     views: 428,
   },
 ];

@@ -408,7 +408,6 @@ const Sidebar = ({
     //   </div>
     // </div>
     <>
-      {/* Mobile overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-white/20 backdrop-blur-[2px] cursor-pointer z-[10000] lg:hidden"
@@ -416,7 +415,6 @@ const Sidebar = ({
         />
       )}
 
-      {/* Sidebar - always visible on md screens, conditionally visible on mobile */}
       <div
         id="sidebar"
         className={`w-64 bg-white shadow shadow-[#B6B6B61A] fixed h-full z-30 transition-transform duration-300 ease-in-out lg:translate-x-0 ${
