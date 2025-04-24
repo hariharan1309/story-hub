@@ -324,9 +324,13 @@ const Sidebar = ({
 }) => {
   const [activeTab, setActiveTab] = useState("Dashboard");
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
+    const handleClickOutside = (event: MouseEvent) => {
       const sidebarElement = document.getElementById("sidebar");
-      if (isOpen && sidebarElement && !sidebarElement.contains(event.target)) {
+      if (
+        isOpen &&
+        sidebarElement &&
+        !sidebarElement.contains(event.target as Node)
+      ) {
         toggleSidebar();
       }
     };
