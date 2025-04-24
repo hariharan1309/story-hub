@@ -419,7 +419,7 @@ const Sidebar = ({
       {/* Sidebar - always visible on md screens, conditionally visible on mobile */}
       <div
         id="sidebar"
-        className={`w-64 bg-white border-r border-gray-200 fixed h-full z-30 transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+        className={`w-64 bg-white shadow shadow-[#B6B6B61A] fixed h-full z-30 transition-transform duration-300 ease-in-out lg:translate-x-0 ${
           isOpen ? "translate-x-0 z-[99999]" : "-translate-x-full"
         } lg:static`}
       >
